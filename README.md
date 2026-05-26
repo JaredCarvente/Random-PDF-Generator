@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📄 Random PDF Generator
+# Random PDF Generator
 
 **Bulk PDF document generator for load testing and system validation environments**
 
@@ -39,12 +39,12 @@ Its primary purpose is to meet the need for realistic, high-volume PDF datasets 
 
 | Feature | Description |
 |---|---|
-| 📦 **Bulk generation** | Creates N PDF documents in a single execution |
-| 📏 **Controlled file size** | Each file is randomly sized within the configured MB range |
-| 🔤 **Valid content** | PDFs contain human-readable random text (not binary garbage) |
-| 🏷️ **Custom naming** | File names follow the pattern `<PREFIX>-<NUMBER>.pdf` |
-| 📊 **Progress bar** | Real-time visual tracking powered by `tqdm` |
-| 📁 **Configurable output** | Destination folder is user-defined and auto-created if missing |
+| **Bulk generation** | Creates N PDF documents in a single execution |
+| **Controlled file size** | Each file is randomly sized within the configured MB range |
+| **Valid content** | PDFs contain human-readable random text (not binary garbage) |
+| **Custom naming** | File names follow the pattern `<PREFIX>-<NUMBER>.pdf` |
+| **Progress bar** | Real-time visual tracking powered by `tqdm` |
+| **Configurable output** | Destination folder is user-defined and auto-created if missing |
 
 ---
 
@@ -122,11 +122,11 @@ python generar_pdfs.py --cantidad <N> --tmin <MB> --tmax <MB> --patron <PREFIX> 
 
 | Parameter | Type | Required | Description |
 |---|---|---|---|
-| `--cantidad` | `int` | ✅ | Total number of PDF documents to generate |
-| `--tmin` | `int` | ✅ | Minimum file size per document in megabytes (MB) |
-| `--tmax` | `int` | ✅ | Maximum file size per document in megabytes (MB) |
-| `--patron` | `str` | ✅ | Prefix used in the generated file names |
-| `--salida` | `str` | ✅ | Output folder path where PDFs will be saved |
+| `--cantidad` | `int` | Yes | Total number of PDF documents to generate |
+| `--tmin` | `int` | Yes | Minimum file size per document in megabytes (MB) |
+| `--tmax` | `int` | Yes | Maximum file size per document in megabytes (MB) |
+| `--patron` | `str` | Yes | Prefix used in the generated file names |
+| `--salida` | `str` | Yes | Output folder path where PDFs will be saved |
 
 > **Note:** The final size of each file is randomly chosen within the `[tmin, tmax]` range. File names are generated using the format `<patron>-<5 random digits>.pdf`.
 
@@ -149,13 +149,13 @@ python generar_pdfs.py --cantidad 50 --tmin 2 --tmax 5 --patron LOAD_REPORT --sa
 ### Expected console output
 
 ```
-📄 Generating 10 PDF documents...
+Generating 10 PDF documents...
 File size range: 1 MB - 3 MB
 Output folder: ./output
 
 Progress: 100%|██████████████████████████| 10/10 [00:42<00:00,  4.2s/pdf]
 
-✅ Process complete. PDFs generated successfully.
+Process complete. PDFs generated successfully.
 ```
 
 ### Generated file structure
